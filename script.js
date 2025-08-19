@@ -1,0 +1,395 @@
+  <script>
+        // Parse the CSV data
+        const csvData = `Task Name,Duration (days),Start,Finish,Resource Names,Additional Actions/Reqt.
+1. Borr RIG START PROCESS,15,"Saturday, April 11, 2026","Sunday, April 26, 2026",,
+   Spud Date,0,"Sunday, April 26, 2026","Monday, April 27, 2026",,
+7. GEOMATICS ACTIVITIES,,,,,
+"WHP Mapping, Passage Plan & Positioning drawing for the Rig at WHP",5,"Thursday, February 12, 2026","Tuesday, February 17, 2026",Jide/Peter,
+"Debris Survey at Platform Location- Pre-mob Activities (Project Execution Plan, Security Plan, CTS, HSE Plan, ERP, Vessel Mobilization- Verification and Calibration), Mobilization of Vessel, Equipment & Personnel), Data Acquisition, Reporting &  Demobilization. ",21,"Thursday, March 12, 2026","Thursday, April 2, 2026",Jide/Peter,The commencement of the debris survey is dependent on the completion of the WHP Installation.
+Mobilization of Navigation and Positioning Contractor to Rig for Rig Move and Positioning,3,"Thursday, March 12, 2026","Sunday, March 15, 2026",Jide/Peter,Mobilization of the navigation and positioning contractor needs more clarity where will the mobilization take place? Lagos or PHC.
+Well Fix and Coordination and Well Coordinate Publishing,17,"Saturday, April 11, 2026","Tuesday, April 28, 2026",Jide/Peter,This will be completed when rig has spudded at the location.
+2. STAKEHOLDER MANAGEMENT,,,,,
+   Secure EIA Approval/Waiver,0,"Tuesday, October 28, 2025","Tuesday, October 28, 2025",Bolaji/Stanley Odu,Done
+   Effluent Waste Discharge Permit,60,"Monday, January 5, 2026","Friday, March 6, 2026",Bolaji/Itoken,
+  HI Wells Well proposals DPR Approval - Drilling Permit,60,"Monday, January 5, 2026","Friday, March 6, 2026",Bolaji/Stanley Odu,
+   FTO ,60,"Monday, January 5, 2026","Friday, March 6, 2026",Bolaji/Stanley Odu,
+   Environmental Monitoring Plan,30,"Monday, January 5, 2026","Wednesday, February 4, 2026",Bolaji/Stanley Odu,
+   NNRA Permit,60,"Monday, January 5, 2026","Friday, March 6, 2026",Bolaji/Stanley Odu,
+3. CONTRACTING PROCESS INTERFACE,,,,,
+      Rig Contract Kick off meeting,1,"Monday, July 27, 2026","Tuesday, July 28, 2026",Bolaji,
+      Rig mobilization Notice to Borr,0,"Tuesday, January 6, 2026","Tuesday, January 6, 2026",Bolaji,TBC
+      Activate Rig Contract in SAP,7,"Thursday, February 5, 2026","Thursday, February 12, 2026",King,
+4. HSE MS PLANNING AND IMPLEMENTATION,90,"Monday, August 3, 2026","Sunday, November 1, 2026",Bolaji,
+"   Rig HSE CASE Review and Bridging document, HSE Plan",90,"Monday, August 3, 2026","Sunday, November 1, 2026",Bolaji,
+"   HAC Drawing, Noise map, etc",30,"Monday, August 3, 2026","Wednesday, September 2, 2026",Bolaji,
+   Rig Bowtie Document ,28,"Monday, September 1, 2025","Monday, September 29, 2025",Bolaji,to check with rig for more details they have
+   Contractor HSE Capability Assessment/Gap closure,35,"Monday, October 27, 2025","Monday, December 1, 2025",Bolaji,
+"   Emergency response plan HSE (Spill, Security, Fire, MEDEVAC, Down manning etc)",56,"Monday, November 3, 2025","Monday, December 29, 2025",Bolaji,
+   Sign-off Joint Safety Improvement Plan (JSIP) - SNEPCO/Rig Contractor,15,"Monday, November 10, 2025","Tuesday, November 25, 2025",Bolaji,
+   Crew HSE Training Plan and Schedule w/Full crew list,28,"Thursday, November 27, 2025","Thursday, December 25, 2025",Bolaji,
+   Bridging Document Review and Sign-off,28,"Thursday, November 27, 2025","Thursday, December 25, 2025",Bolaji,
+"   Roll out of Shell Policies, procedures and Trainings for Crew e.g AA, LSR, L&H, DROPS,ABC of TPW,Covid-19 combination of controls, PCM, Emergency Response Manual, SEPCiN Lifting & Hoisting Guide, SEPCiN Lifting & Hoisting Procedure, SEPCiN Lifting & H",28,"Monday, February 23, 2026","Monday, March 23, 2026",Bolaji,
+"   HSE Trainings and Certifications Verification (Fire fighting, Designated First Aider, RAH, PTW, AGT, LoTo etc)",28,"Monday, November 24, 2025","Monday, December 22, 2025",Bolaji,
+   HAZID WORKSHOP,14,"Monday, October 13, 2025","Monday, October 27, 2025",Bolaji,
+"   List of Key Contacts: SNEPCO, Rig Contractors, Rig Location, HAL",28,"Tuesday, November 11, 2025","Tuesday, December 9, 2025",Bolaji,
+5. VALUE ASSURANCE,,,,,
+   Draft Rig commissioning/ SIT procedure,1,"Thu 6/30/22","Thu 6/30/22",Segun,rig contratc appendix 1 
+   Rig acceptance Visit/Report Out,14,"Saturday, August 1, 2026","Saturday, August 15, 2026",Segun,
+"    LLI List + Tracking (Casing, Wellhead, Quick Connector, etc)",240,"Tuesday, June 2, 2026","Thursday, January 28, 2027",Segun,
+   Performance Improvement Plan - PIP (Update WEIS),210,"Monday, May 4, 2026","Monday, November 30, 2026",Segun,
+   Material Selection,7,"Tuesday, November 4, 2025","Tuesday, November 11, 2025",Segun,Closed
+"   SOP for Key activities (FIT, BOP Test, BHA P/u, Cementing, Casing running etc)",30,"Monday, October 5, 2026","Wednesday, November 4, 2026",Segun,
+   Time breakdown ,7,"Monday, July 6, 2026","Monday, July 13, 2026",Segun,
+   GIP Approval / Budget provision,14,"Monday, January 5, 2026","Monday, January 19, 2026",Segun,
+   Worker welfare (Labour law and Working conditions) - Contractor approved plan,30,"Monday, August 10, 2026","Wednesday, September 9, 2026",Segun,
+"   WCCP, Relief Well plan (we have)",30,"Sunday, August 9, 2026","Tuesday, September 8, 2026",Segun,"(SCERP-Cory Weltch), "
+   Set up LRST Team,1,"Monday, August 10, 2026","Tuesday, August 11, 2026",Segun,relay on GRST
+   Drilling Programs draft,60,"Monday, September 7, 2026","Friday, November 6, 2026",Segun,
+"   Shear test for largest pipe, smallest pipe and completions with control line",210,"Friday, June 12, 2026","Friday, January 8, 2027",Segun,shear DP test
+   Rig Contractor NUPRC permit and Registrations,60,"Monday, January 12, 2026","Friday, March 13, 2026",Segun,talk to Borr
+   Waste Management Survey,7,"Monday, August 31, 2026","Monday, September 7, 2026",Bolaji,Boye
+   LRST TOR and Schedule,1,"Monday, August 17, 2026","Tuesday, August 18, 2026",Segun,talk to Sunday
+"   LRST Visit (HSE, IT, OH, L&H, Process Safety, Electrical, Mechanical)",21,"Monday, September 14, 2026","Monday, October 5, 2026",Segun,
+   GRST Desktop Review Kickoff and RSVP,210,"Monday, August 3, 2026","Monday, March 1, 2027",Segun,
+"   Detailed Review of Contractor Personnel, Equipment and Procedures",60,"Sunday, October 18, 2026","Thursday, December 17, 2026",Segun,
+   3rd Party Inspection (Condition & Drops Survey). Includes Mechanical and Electrical Survey,21,"Monday, October 19, 2026","Monday, November 9, 2026",Bolaji,"DROPs survey will done by rig before mob, "
+   RSVP Corrective Action Register,14,"Monday, September 21, 2026","Monday, October 5, 2026",Bolaji,
+   Develop project QA/QC Plan,7,"Monday, September 21, 2026","Monday, September 28, 2026",Bolaji,
+   Shooting Nipple preparation for EWL perforation ,21,"Monday, October 19, 2026","Monday, November 9, 2026",Ifeanyi,discuss with HAL
+"   Emergency response plan Technical (Kick, Gas response, Losses, stuck pipe, etc)",30,"Monday, October 19, 2026","Wednesday, November 18, 2026",Segun,a part of company well control plan
+   DROPS Survey and Close-out,7,"Wednesday, March 3, 2027","Wednesday, March 10, 2027",Bolaji,
+CWT Update,14,"Wednesday, November 25, 2026","Wednesday, December 9, 2026",Segun/ifeanyi,collaborative workspace tool
+"Well Testing HAZOP - Rig and HES Equipmet compatibility, Draft P&ID",21,"Wednesday, December 2, 2026","Wednesday, December 23, 2026",Ifeanyi,
+   Waste Management Plan (including Spill containment material requirement),30,"Tuesday, December 1, 2026","Thursday, December 31, 2026",Boye Famoroti,
+   Well Control Equipment Spares List,7,"Monday, September 7, 2026","Monday, September 14, 2026",Segun,
+   Well Testing Bowtie,30,"Monday, October 12, 2026","Wednesday, November 11, 2026",Ifeanyi,
+   Well Testing Rig up plan & performance target,30,"Tuesday, October 13, 2026","Thursday, November 12, 2026",Ifeanyi,
+   Well Control readiness,30,"Tuesday, November 3, 2026","Thursday, December 3, 2026",Segun,as a part of company well control plan
+WCP,14,"Monday, November 2, 2026","Monday, November 16, 2026",Segun,
+   eWCAT Creation and Upload,5,"Tuesday, March 3, 2026","Sunday, March 8, 2026",Segun,
+   Service Contractors' Readiness Cadence - Bi-weekly,210,"Monday, July 6, 2026","Monday, February 1, 2027",Segun/Ifeanyi,
+   Rig Contractor Readiness Cadence - Weekly,210,"Tuesday, July 7, 2026","Tuesday, February 2, 2027",Segun,
+   Well Quality Scorecard: Pre-drill (WACC),210,"Monday, July 6, 2026","Monday, February 1, 2027",Bolaji,WAC
+   Joint Performance Aspiration meeting - Integrated Delivery,5,"Wednesday, October 7, 2026","Monday, October 12, 2026",Segun,
+6. LOCAL INTERFACE MANAGEMENT,,,,,
+   Project and Facility  readiness (Bi-weekly cadence),500,"Monday, October 12, 2026","Thursday, February 24, 2028",Bolaji,
+   Hook-up and flow back strategy Discussions,0,,Bolaji,
+7. LOGISTICS AND MOBILIZATION,,,,,
+   Security Plan  - Rig Move and Operations,30,"Monday, January 12, 2026","Wednesday, February 11, 2026",Bolaji,
+"   Telecoms (IT) Readiness review (Computer, Printer, Scanner, Phone box/line, Internet, WiFi equipments, coverage & third party access)",30,"Monday, January 12, 2026","Wednesday, February 11, 2026",Segun,
+   Joint SNEPCO/RIG Contractor Rig Move Strategy and Alignment Discussion,60,"Monday, January 12, 2026","Friday, March 13, 2026",Bolaji,
+"   Logistics Readiness and Plan - Transportation, Lifting & Hoisting, Fuel",60,"Monday, October 13, 2025","Friday, December 12, 2025",Bolaji,
+   QA/QC of Third party equipment,30,"Monday, January 12, 2026","Wednesday, February 11, 2026",Friday,
+   HAL PSL and service parties Equipment Mobilization/Installation Actual,60,"Monday, January 12, 2026","Friday, March 13, 2026",Segun,HAL PM to provide 
+"  RTOC, Mud Logging, MWD, MPD, Data transmission readiness",30,"Monday, January 12, 2026","Wednesday, February 11, 2026",Bolaji,
+   SNEPCO Personnel Manning Plan,14,"Monday, October 12, 2026","Monday, October 26, 2026",Hongkai,
+   Route Survey,210,"Monday, January 12, 2026","Monday, August 10, 2026",Bolaji,to define the name and scope 
+   Rig Move Plan,21,"Thursday, October 22, 2026","Thursday, November 12, 2026",Bolaji,
+   Mobilize Security to Rig,1,"Wednesday, April 1, 2026","Thursday, April 2, 2026",Bolaji,TBC
+   Telecoms (IT) Mobilization and Installation on the rig,7,"Wednesday, April 1, 2026","Wednesday, April 8, 2026",Bolaji,
+   OCTG Inspection at Supply base-Pre-load out inspection,7,"Monday, January 5, 2026","Monday, January 12, 2026",Bolaji,
+   Provision of Spill Response Plan/Material,7,"Monday, January 12, 2026","Monday, January 19, 2026",Boye,
+"   ER Exercise (Procedure, Logistics & Communication)",14,"Monday, January 12, 2026","Monday, January 26, 2026",Bolaji,
+   Create PO for Services,21,"Monday, February 2, 2026","Monday, February 23, 2026",Segun,
+8. START FOR PERFORMANCE,,,,,
+   Actual Rig move,2,"Wednesday, April 1, 2026","Friday, April 3, 2026",Segun,
+   Detailed Well Activity Breakdown,1,"Monday, August 3, 2026","Tuesday, August 4, 2026",Segun,
+   DWOP/CWOP/ Well Lift OP,1,"Monday, January 19, 2026","Tuesday, January 20, 2026",Segun,
+   Final Joint Rig Move Meeting,0,"Thursday, March 5, 2026","Thursday, March 5, 2026",Segun,
+   Rig's Key Performance Indicators - Micro KPIs for rig operation,14,"Monday, December 1, 2025","Monday, December 15, 2025",Segun,
+   Rig's Incentive Program - Discussion with crew,0,"Friday, August 7, 2026","Friday, August 7, 2026",Segun,
+   Pre-Spud Meeting,1,"Monday, April 20, 2026","Tuesday, April 21, 2026",Segun,
+   Rig site HSSE and ER Trainings - Inductions and Drills,2,"Wednesday, April 22, 2026","Friday, April 24, 2026",Segun,
+   Rig site Induction Pack,1,"Monday, August 10, 2026","Tuesday, August 11, 2026",Ngozi,
+   Rig Onsite Commissioning/ SIT,2,"Monday, April 13, 2026","Wednesday, April 15, 2026",Segun,
+   Start of Operations,0,"Saturday, April 11, 2026","Saturday, April 11, 2026",Segun,
+   SNEPCO Wells Documentation Requirements,1,"Monday, February 9, 2026","Tuesday, February 10, 2026",Segun,
+   Rig Start AAR,2,"Tuesday, May 5, 2026","Thursday, May 7, 2026",Segun,`;
+
+        // Parse CSV data
+        function parseCSV(csv) {
+            const lines = csv.split('\n');
+            const tasks = [];
+            let currentCategory = '';
+            let categoryIndex = 0;
+
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+
+                const parts = [];
+                let current = '';
+                let inQuotes = false;
+
+                for (let j = 0; j < line.length; j++) {
+                    const char = line[j];
+                    if (char === '"' && (j === 0 || line[j-1] === ',')) {
+                        inQuotes = true;
+                    } else if (char === '"' && inQuotes && (j === line.length - 1 || line[j+1] === ',')) {
+                        inQuotes = false;
+                    } else if (char === ',' && !inQuotes) {
+                        parts.push(current.trim());
+                        current = '';
+                    } else {
+                        current += char;
+                    }
+                }
+                parts.push(current.trim());
+
+                const [taskName, duration, start, finish, resource, notes] = parts;
+
+                if (taskName && taskName.match(/^\d+\./)) {
+                    currentCategory = taskName;
+                    categoryIndex++;
+                    continue;
+                }
+
+                if (taskName && start && finish) {
+                    const startDate = parseDate(start);
+                    const endDate = parseDate(finish);
+                    
+                    if (startDate && endDate) {
+                        tasks.push({
+                            name: taskName,
+                            duration: duration || '0',
+                            start: startDate,
+                            end: endDate,
+                            resource: resource || 'Unassigned',
+                            category: currentCategory,
+                            categoryIndex: categoryIndex,
+                            notes: notes || '',
+                            isSubtask: taskName.startsWith('   ')
+                        });
+                    }
+                }
+            }
+
+            return tasks;
+        }
+
+        function parseDate(dateStr) {
+            if (!dateStr) return null;
+            
+            // Handle different date formats
+            const cleanDate = dateStr.replace(/"/g, '');
+            
+            // Try to parse the date
+            try {
+                const date = new Date(cleanDate);
+                if (date.getTime()) {
+                    return date;
+                }
+            } catch (e) {
+                // Try alternative parsing
+                const parts = cleanDate.split('/');
+                if (parts.length === 3) {
+                    return new Date(parts[2], parts[0] - 1, parts[1]);
+                }
+            }
+            
+            return null;
+        }
+
+        const tasks = parseCSV(csvData);
+
+        // Calculate project timeline
+        const allDates = tasks.reduce((dates, task) => {
+            dates.push(task.start, task.end);
+            return dates;
+        }, []);
+
+        const projectStart = new Date(Math.min(...allDates));
+        const projectEnd = new Date(Math.max(...allDates));
+        const totalDays = Math.ceil((projectEnd - projectStart) / (1000 * 60 * 60 * 24));
+
+        // Generate timeline headers (months)
+        function generateTimelineHeaders() {
+            const headers = [];
+            const current = new Date(projectStart);
+            
+            while (current <= projectEnd) {
+                headers.push({
+                    date: new Date(current),
+                    label: current.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+                });
+                current.setMonth(current.getMonth() + 1);
+            }
+            
+            return headers;
+        }
+
+        const timelineHeaders = generateTimelineHeaders();
+
+        // Calculate task bar positions
+        function calculateTaskPosition(task) {
+            const taskStart = Math.max(0, Math.floor((task.start - projectStart) / (1000 * 60 * 60 * 24)));
+            const taskDuration = Math.ceil((task.end - task.start) / (1000 * 60 * 60 * 24));
+            const taskWidth = Math.max(1, (taskDuration / totalDays) * 100);
+            const taskLeft = (taskStart / totalDays) * 100;
+            
+            return {
+                left: taskLeft,
+                width: taskWidth,
+                duration: taskDuration
+            };
+        }
+
+        // Render functions
+        function renderStats() {
+            const stats = document.getElementById('stats');
+            const totalTasks = tasks.length;
+            const totalDuration = Math.ceil((projectEnd - projectStart) / (1000 * 60 * 60 * 24));
+            const categories = [...new Set(tasks.map(t => t.category))].length;
+            const resources = [...new Set(tasks.map(t => t.resource))].length;
+
+            stats.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-number">${totalTasks}</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${totalDuration}</div>
+                    <div class="stat-label">Project Days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${categories}</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${resources}</div>
+                    <div class="stat-label">Resources</div>
+                </div>
+            `;
+        }
+
+        function renderGanttChart(filteredTasks = tasks) {
+            const tbody = document.getElementById('ganttBody');
+            tbody.innerHTML = '';
+
+            filteredTasks.forEach((task, index) => {
+                const position = calculateTaskPosition(task);
+                const row = document.createElement('tr');
+                
+                const taskClass = task.duration === '0' ? 'milestone' : 'task-bar';
+                const categoryClass = `category-${task.categoryIndex % 8 + 1}`;
+                
+                row.innerHTML = `
+                    <td class="task-name ${task.isSubtask ? 'subtask' : ''}">
+                        ${task.category && !task.isSubtask ? `<div class="task-category">${task.category}</div>` : ''}
+                        ${task.name}
+                    </td>
+                    <td class="duration">${task.duration} ${task.duration === '1' ? 'day' : 'days'}</td>
+                    <td>${task.start.toLocaleDateString()}</td>
+                    <td>${task.end.toLocaleDateString()}</td>
+                    <td><span class="resource">${task.resource}</span></td>
+                    <td class="timeline-cell">
+                        ${task.duration === '0' ? 
+                            `<div class="milestone" style="left: ${position.left}%;" data-task="${index}"></div>` :
+                            `<div class="${taskClass} ${categoryClass}" style="left: ${position.left}%; width: ${position.width}%;" data-task="${index}">
+                                ${position.duration}d
+                            </div>`
+                        }
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+
+            // Add event listeners for tooltips
+            document.querySelectorAll('.task-bar, .milestone').forEach(element => {
+                element.addEventListener('mouseenter', showTooltip);
+                element.addEventListener('mouseleave', hideTooltip);
+                element.addEventListener('mousemove', moveTooltip);
+            });
+        }
+
+        function showTooltip(e) {
+            const tooltip = document.getElementById('tooltip');
+            const taskIndex = e.target.getAttribute('data-task');
+            const task = tasks[taskIndex];
+            
+            tooltip.innerHTML = `
+                <strong>${task.name}</strong><br>
+                Duration: ${task.duration} days<br>
+                Start: ${task.start.toLocaleDateString()}<br>
+                End: ${task.end.toLocaleDateString()}<br>
+                Resource: ${task.resource}<br>
+                ${task.notes ? `Notes: ${task.notes}` : ''}
+            `;
+            tooltip.style.opacity = '1';
+        }
+
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.opacity = '0';
+        }
+
+        function moveTooltip(e) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.left = e.pageX + 10 + 'px';
+            tooltip.style.top = e.pageY + 10 + 'px';
+        }
+
+        function populateFilters() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const resourceFilter = document.getElementById('resourceFilter');
+            
+            const categories = [...new Set(tasks.map(t => t.category))].filter(c => c);
+            const resources = [...new Set(tasks.map(t => t.resource))].filter(r => r);
+            
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categoryFilter.appendChild(option);
+            });
+            
+            resources.forEach(resource => {
+                const option = document.createElement('option');
+                option.value = resource;
+                option.textContent = resource;
+                resourceFilter.appendChild(option);
+            });
+        }
+
+        function applyFilters() {
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const resourceFilter = document.getElementById('resourceFilter').value;
+            const searchFilter = document.getElementById('searchFilter').value.toLowerCase();
+            
+            let filteredTasks = tasks;
+            
+            if (categoryFilter !== 'all') {
+                filteredTasks = filteredTasks.filter(task => task.category === categoryFilter);
+            }
+            
+            if (resourceFilter !== 'all') {
+                filteredTasks = filteredTasks.filter(task => task.resource === resourceFilter);
+            }
+            
+            if (searchFilter) {
+                filteredTasks = filteredTasks.filter(task => 
+                    task.name.toLowerCase().includes(searchFilter) ||
+                    task.resource.toLowerCase().includes(searchFilter) ||
+                    task.notes.toLowerCase().includes(searchFilter)
+                );
+            }
+            
+            renderGanttChart(filteredTasks);
+        }
+
+        // Initialize the application
+        function init() {
+            renderStats();
+            renderGanttChart();
+            populateFilters();
+            
+            // Add event listeners for filters
+            document.getElementById('categoryFilter').addEventListener('change', applyFilters);
+            document.getElementById('resourceFilter').addEventListener('change', applyFilters);
+            document.getElementById('searchFilter').addEventListener('input', applyFilters);
+        }
+
+        // Start the application
+        init();
+    </script>
