@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borr Rig Intake Plan - Gantt Chart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Borr Rig Intake Plan</h1>
+            <p>Project Timeline & Task Management Dashboard</p>
+        </div>
+
+        <div class="controls">
+            <div class="filter-group">
+                <label for="categoryFilter">Category:</label>
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="resourceFilter">Resource:</label>
+                <select id="resourceFilter">
+                    <option value="all">All Resources</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="searchFilter">Search:</label>
+                <input type="text" id="searchFilter" placeholder="Search tasks...">
+            </div>
+        </div>
+
+        <div class="stats" id="stats">
+            <!-- Stats will be populated by JavaScript -->
+        </div>
+
+        <div class="gantt-container">
+            <table class="gantt-chart" id="ganttChart">
+                <thead>
+                    <tr>
+                        <th style="width: 400px;">Task Name</th>
+                        <th style="width: 100px;">Duration</th>
+                        <th style="width: 120px;">Start Date</th>
+                        <th style="width: 120px;">End Date</th>
+                        <th style="width: 150px;">Resource</th>
+                        <th style="width: 800px;">Timeline</th>
+                    </tr>
+                </thead>
+                <tbody id="ganttBody">
+                    <!-- Tasks will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
